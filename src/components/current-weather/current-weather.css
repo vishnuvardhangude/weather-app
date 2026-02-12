@@ -1,17 +1,21 @@
 .weather {
-    width: 300px;
+    max-width: 1080px;
+    width: 90%;
     border-radius: 6px;
     box-shadow: 10px -2px 20px 2px rgba(0,0,0, 0.3);
     color: white;
-    background-color: #333;
+    background-color: rgba(0,0,0, 0.3);
     margin: 20px auto 0 auto;
-    padding: 0 20px;
+    padding: 20px 20px;
 }
 
 .top {
+    max-width: 900px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 20px auto;
+
 }
 
 .city {
@@ -22,16 +26,25 @@
     letter-spacing: 1px;
 }
 
-.desc {
+.weather-description {
     font-weight: 400;
     font-size: 14px;
     line-height: 1;
     margin: 0;
     letter-spacing: 1px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
 }
 
 .weather-icon {
   width: 100px;
+}
+
+.top > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 
@@ -69,3 +82,48 @@
 .parameter-label.top {
   border-bottom: 1px solid #fff;
 }
+
+.bottom {
+  max-width: 900px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255,255,255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+
+.feels, .humidity, .wind, .pressure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.bold {
+  font-weight: 600 !important;
+  font-size: 20px !important;
+  margin: 0 !important;
+  line-height: 1;
+}
+
+.feels p, .humidity p, .wind p, .pressure p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+/* .bottom {
+  border-radius: 6px;
+  box-shadow: 10px -2px 20px 2px rgba(0,0,0, 0.3);
+  background-color: rgba(0,0,0, 0.4);
+
+} */

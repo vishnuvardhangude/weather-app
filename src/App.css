@@ -1,5 +1,70 @@
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
+  background: url("./assets/sunset.jpg") no-repeat center center / cover;
+  background-attachment: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+.search {
+  /* text-align: center; */
+  /* padding: 1rem; */
+  width: 90%;
+  padding: .7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255,255,255, 0.8);
+  background: rgba(255,255,255, 0.1);
+  color: #121111;
+  max-width: 1080px;
+  margin: 20px auto;
+}
+
+
+
 .container {
   max-width: 1080px;
   margin: 20px auto;
-  
+}
+
+/* AsyncPaginate Styling */
+.react-select-async-paginate__control {
+  background: transparent !important;
+  border: none !important;
+  color: #fff;
+  position: relative !important;
+  z-index: 999 !important;
+}
+
+.react-select-async-paginate__input {
+  color: #fff !important;
+}
+
+.react-select-async-paginate__placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.react-select-async-paginate__menu {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  z-index: 1000 !important;
+}
+
+.react-select-async-paginate__option {
+  color: #fff !important;
+  background: transparent !important;
+}
+
+.react-select-async-paginate__option:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.react-select-async-paginate__single-value {
+  color: #fff !important;
 }
