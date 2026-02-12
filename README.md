@@ -13,6 +13,7 @@ The app fetches live weather data from a public weather API (https://openweather
 Get the API from following and add in env file
 
 Public Weather API: https://openweathermap.org/
+
 GEO DB Cities API: https://rapidapi.com/wirefreethought/api/geodb-cities
 
 ```bash
