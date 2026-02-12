@@ -10,7 +10,7 @@ function App() {
 
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
-  
+
 
   const handleOnSearchChange = (searchData) => {
     // console.log("test")
@@ -39,7 +39,7 @@ function App() {
 
         // console.log(currentWeather);
         // console.log(forecast);
-        
+
       })
       .catch(console.log);
 
@@ -47,11 +47,15 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <Search onSearchChange={handleOnSearchChange} />
-      {currentWeather && <CurrentWeather data={currentWeather} />}
-      {forecast && <Forecast data={forecast}/>}
-      {/* <Forecast /> */}
+    <div className='app'>
+      <div className='search'>
+        <Search onSearchChange={handleOnSearchChange} />
+      </div>
+      <div className="container">
+        {currentWeather && <CurrentWeather data={currentWeather} />}
+        {forecast && <Forecast data={forecast} />}
+        
+      </div>
     </div>
   );
 }

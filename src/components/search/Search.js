@@ -12,6 +12,10 @@ const Search = ({onSearchChange}) => {
   }
 
   const loadOptions = async (inputValue) => {
+    
+    if (!inputValue) {
+      return { options: [] };
+    }
 
     return fetch(`${GEO_API_URL}${inputValue}`, geoAPIOptions)
       .then((response) => response.json())
@@ -29,12 +33,13 @@ const Search = ({onSearchChange}) => {
   }
 
   return (
-    <AsyncPaginate
-      placeholder="Search for City"
+    <AsyncPaginate 
+      placeholder="Search"
       debounceTimeout={600}
       value={search}
       onChange={handleOnChange}
       loadOptions={loadOptions}
+      classNamePrefix="react-select-async-paginate"
     />
         
   )
